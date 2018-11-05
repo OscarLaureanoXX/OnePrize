@@ -1,0 +1,371 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+body {
+  background-color: #2e2727;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+    text-align: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.35);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 600px;
+  background-color: #90ac4a;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+}
+
+div.main {
+  width: 70%;
+  height: 100%;
+  float: left;
+  padding: 30px 15px 30px 30px;
+}
+
+div.side {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+div.side .modificar-cantidad {
+  height: 37%;
+  padding: 30px 30px 15px 15px;
+}
+
+div.side .puntos-de-venta {
+  height: 63%;
+  padding: 15px 30px 30px 15px;
+}
+
+div.side .modificar-cantidad div {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.25);
+  padding: 1px;
+}
+
+div.side .puntos-de-venta div {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.25);
+}
+
+div.side .modificar-cantidad a {
+  width: 80%;
+  display: block;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.5);
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 0;
+  text-align: center;
+  transition: all 0.1s ease-in;
+}
+
+div.side .modificar-cantidad a:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+div.side .modificar-cantidad {
+  text-align: center;
+}
+
+div.side .modificar-cantidad span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+div.side .puntos-de-venta div h2 {
+  text-align: center;
+  margin:0;
+}
+
+#pedidos {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.25);
+  padding-top: 200px;
+  overflow: scroll;
+}
+
+#pedidos h3 {
+  text-align: center;
+  color: #ffffff;
+}
+
+#modifica {
+  display: none;
+  z-index: 500;
+  border-radius: 7px;
+  background-color: #000000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  padding: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#modifica h2 {
+  margin: 10px auto;
+}
+
+#modifica .entrada {
+  margin-top: 25px;
+  width: 100%;
+  height: 25px;
+  display: block;
+}
+
+#modifica span {
+  color: #ffffff;
+  text-align: 0 auto;
+  font-size: 30px;
+}
+
+#modifica input {
+  display: block;
+  margin: 0px auto;
+  width: 60%;
+  float: left;
+  height: 100%;
+}
+
+#modifica input[type="button"]#suma,
+#modifica input[type="button"]#resta {
+  display: block;
+  width: 20%;
+  height: 100%;
+  float: left;
+  color: #ffffff;
+  background-color: rgba(255,255,255,0.2);
+  border:none;
+}
+
+#modifica input[type="button"]#suma:hover,
+#modifica input[type="button"]#resta:hover {
+  cursor:pointer;
+  background-color: rgba(255,255,255,0.4);
+}
+
+#modifica .botones {
+  margin: 40px 0;
+  width: 100%;
+  height: 25px;
+  display: block;
+}
+
+#modifica .botones input[type="submit"] {
+  width: 45%;
+  height: 100%;
+  float: left;
+  margin: 0 5px;
+  background-color: rgba(255,255,255,0.2);
+  border:none;
+}
+
+#modifica input[type="submit"]:hover {
+  background-color: rgba(255,255,255,0.4);
+  cursor:pointer;
+}
+
+#backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.7);
+  transition: all 0.25s ease-in;
+}
+
+#pedidos {
+  padding: 10px;
+  position: relative;
+}
+
+#pedidos table {
+  border-collapse: collapse;
+  color: #ffffff;
+  text-align: center;
+}
+
+#pedidos table tbody {
+  font-size: 14px;
+  color: #ffffff;
+  color: rgba(255,255,255,0.7);
+}
+
+#pedidos table th,
+#pedidos table td {
+  padding: 12px 4px;
+}
+
+#pedidos table thead {
+  background-color: rgba(0,0,0,0.4);
+}
+
+#pedidos tr {
+  background-color: rgba(0,0,0,0.15);
+  margin: 4px 0;
+}
+
+#pedidos td {
+  margin: 4px 0;
+}
+
+#pedidos h3 {
+  margin: 15px 0;
+}
+
+#pedidos #agregar_pedido {
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    float: right;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-weight: bold;
+}
+
+a#a_modificar {
+    margin-bottom: 20px;
+}
+
+div.ajustar-cantidad {
+  padding: 1px;
+  display: block;
+  margin-bottom: 50px;
+  height: 30px;
+}
+
+tr.pedido-completado td {
+  background-color: rgba(0,0,0,0.3);
+  color: #777777;
+}
+
+.puntos-de-venta > div {
+  padding: 25px;
+  overflow: scroll;
+}
+
+.puntos-de-venta a {
+  width: 70%;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.55);
+}
+
+.puntos-de-venta a:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.puntos-de-venta ul {
+  padding: 0;
+}
+
+.puntos-de-venta ul li {
+  background-color: rgba(0,0,0,0.35);
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 7px;
+  padding: 10px 0;
+  transition: all 0.2s ease-in;
+  width: 100%;
+}
+
+.puntos-de-venta ul li:hover {
+  background-color: rgba(0,0,0,0.45);
+}
+
+.puntos-de-venta ul li a,
+.puntos-de-venta ul li a:hover{
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  width: 100%;
+}
+
+.puntos-de-venta .head {
+  height: 45px!important;
+  display: flex;
+  flex-direction: row;
+  background: none!important;
+  align-items: center;
+}
+
+.puntos-de-venta .head a {
+  width: 35px;
+  height: 35px;
+  line-height: 30px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.puntos-de-venta .head a:hover {
+  background-color: rgba(0,0,0,0.45);
+}

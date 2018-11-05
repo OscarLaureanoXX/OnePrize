@@ -1,0 +1,77 @@
+form {
+  background-color: #90ac4a;
+  padding: 20px;
+  border-radius: 6px;
+  width: 70%;
+  -webkit-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  font-weight: bold;
+  margin: 100px auto 0 auto;
+}
+
+fieldset {
+  border: none;
+  padding: 7px 10px;
+  margin: 0;
+}
+
+fieldset label {
+  margin: 0 15px;
+}
+
+input[disabled]{
+  cursor: not-allowed;
+}
+
+form button {
+  border: none;
+  background: none;
+  color: white;
+  font-weight: bold;
+}
+
+form h1 {
+  display: block;
+  background-color: rgba(0,0,0,0.5);
+  margin-top: 0;
+  border-radius: 6px 6px 0 0;
+  padding: 7px;
+  padding-left: 15px;
+  color: #ffffff;
+}
+
+a {
+  padding: 5px;
+  display: block;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.1s ease-in;
+}
+
+a:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+a#agregar_pedido {
+  width: 170px;
+  text-align: center;
+  float: right;
+  padding: 10px 0;
+}
+
+#input_cantidad {
+  width: 50px;
+}
+
+#input_total {
+  width: 100px;
+}
+
+#input_ciudad {
+  width: 120px;
+}
+
+#input_direccion {
+  width: 200px;
+}

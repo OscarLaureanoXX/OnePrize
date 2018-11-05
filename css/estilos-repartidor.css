@@ -1,0 +1,169 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #2e2727;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+a {
+  padding: 5px;
+  display: block;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in;
+}
+
+a:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+input {
+    text-align: center;
+}
+
+header {
+  background: #90ac4a;
+  width: 100%;
+  margin: 0 0 50px 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: -1px 6px 60px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 6px 60px -4px rgba(0,0,0,0.75);
+  box-shadow: -1px 6px 60px -4px rgba(0,0,0,0.75);
+  z-index: 9999;
+}
+
+#logo {
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 600px;
+  background-color: #90ac4a;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+}
+
+div.main {
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding: 30px 15px 30px 30px;
+}
+
+
+#pedidos {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.25);
+  padding-top: 200px;
+}
+
+#pedidos h3 {
+  text-align: center;
+  color: #ffffff;
+}
+
+#modifica span {
+  color: #ffffff;
+  text-align: 0 auto;
+  font-size: 30px;
+}
+
+#modifica input {
+  display: block;
+  margin: 0px auto;
+  width: 60%;
+  float: left;
+  height: 100%;
+}
+
+
+#log_out {
+  padding: 15px 10px;
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  border-radius: 15px;
+}
+
+#log_out:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+#pedidos {
+  padding: 10px;
+  position: relative;
+}
+
+#pedidos table {
+  border-collapse: collapse;
+  color: #ffffff;
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+  transition: all 0.7s ease-in;
+}
+
+#pedidos table tbody {
+  font-size: 14px;
+  color: #ffffff;
+  color: rgba(255,255,255,0.7);
+}
+
+#pedidos table th,
+#pedidos table td {
+  padding: 12px 4px;
+}
+
+#pedidos table thead {
+  background-color: rgba(0,0,0,0.4);
+}
+
+#pedidos tr {
+  background-color: rgba(0,0,0,0.15);
+  margin: 4px 0;
+  transition: all 0.2s ease-in;
+}
+
+#pedidos td {
+  margin: 4px 0;
+}
+
+#pedidos h3 {
+  margin: 15px 0;
+}
+
+tr.pedido-completado td {
+  background-color: rgba(0,0,0,0.3);
+  color: #777777;
+}

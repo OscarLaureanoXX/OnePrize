@@ -1,0 +1,131 @@
+body {
+  background-color: #596b2c;
+  padding: 160px 80px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+form {
+  background-color: #90ac4a;
+  padding: 20px;
+  border-radius: 6px;
+  width: 70%;
+  -webkit-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.fieldset {
+  border: none;
+  padding: 7px 10px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.fieldset > span {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.fieldset > span > input {
+  margin-top: 10px;
+}
+
+form a button {
+  border: none;
+  background: none;
+}
+
+form a button:hover {
+  cursor: pointer;
+}
+
+input[disabled]{
+  cursor: not-allowed;
+}
+
+form input[type="text"] {
+}
+
+form h1 {
+  display: block;
+  background-color: rgba(0,0,0,0.5);
+  margin-top: 0;
+  border-radius: 6px 6px 0 0;
+  padding: 7px;
+  padding-left: 15px;
+  color: #ffffff;
+}
+
+a {
+  padding: 5px;
+  display: block;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in;
+}
+
+a:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons a {
+  margin-left: 20px;
+  padding: 7px 20px;
+}
+
+.buttons a button {
+  color: white;
+}
+
+#agregar_cliente {
+  background-color: rgba(0,0,0,0.4);
+}
+
+#cancelar {
+  background-color: rgba(50,0,0,0.6);
+}
+#cancelar:hover {
+  background-color: rgba(50,0,0,0.7);
+}
+
+#alert {
+  display: none;
+  z-index: 500;
+  border-radius: 7px;
+  background-color: #90ac4a;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 170px;
+  margin-top: -170px;
+  margin-left: -175px;
+  padding: 30px;
+  color: #ffffff;
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+}
+
+#backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.7);
+  transition: all 0.25s ease-in;
+}
