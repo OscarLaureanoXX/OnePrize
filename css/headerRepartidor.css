@@ -1,0 +1,49 @@
+header {
+  background: #90ac4a;
+  width: 100%;
+  margin: 0 0 50px 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: -1px 6px 60px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 6px 60px -4px rgba(0,0,0,0.75);
+  box-shadow: -1px 6px 60px -4px rgba(0,0,0,0.75);
+  z-index: 9999;
+}
+
+#logo {
+  height: 100px!important;
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+#log_out {
+  padding: 15px 10px;
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  border-radius: 15px;
+}
+
+#log_out:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  padding: 5px;
+  display: block;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.2);
+  transition: all 0.1s ease-in;
+}
+
+a:hover {
+  background-color: rgba(0,0,0,0.3);
+}

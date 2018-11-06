@@ -1,6 +1,15 @@
 <?php
-//Seccion de sesion activa
-require_once "scripts/activeSessionAdmin.php";
+//Seccion de sesion activa ---------
+session_start();
+
+if(!isset($_SESSION["status"])){
+  header("Location: index.php");
+}
+
+if($_SESSION["status"] != "admin"){
+  header("Location: index.php");
+}
+//----------------------------------
 
 $idCliente = $_GET["id"];
 
@@ -24,7 +33,7 @@ if ($result->num_rows > 0) {
         $Correo = $row["Correo"];
 
     }
-} 
+}
 else {
     echo "Error base de datos modificarCliente ";
 }
@@ -76,13 +85,13 @@ else {
       </div>
       <div class="buttons">
         <a id="guardar"><button name=action type=submit>Guardar</button></a>
-        <a id="cancelar"><button name=action type=submit>Cancelar</button></a>
+        <a id="cancelar">Cancelar</a>
       </div>
     </form>
     <div id="alert">
       <h1>¿Estás seguro?</h1>
       <a href="scripts/eliminaCliente.php?id=<?php echo $idCliente; ?>">Sí</a>
-      <a href="#">No</a>
+      <a id="no_eliminar"href="#">No</a>
     </div>
     <div id="backdrop">
     <script

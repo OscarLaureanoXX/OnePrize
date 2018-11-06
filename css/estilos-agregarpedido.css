@@ -1,3 +1,15 @@
+body {
+  background-color: #596b2c;
+  padding: 80px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 form {
   background-color: #90ac4a;
   padding: 20px;
@@ -49,15 +61,18 @@ a {
   transition: all 0.1s ease-in;
 }
 
-a:hover {
-  background-color: rgba(0,0,0,0.7);
-}
-
-a#agregar_pedido {
+button#agregar_button {
   width: 170px;
   text-align: center;
   float: right;
   padding: 10px 0;
+  background-color: rgba(0,0,0,0.3);
+  transition: all 0.1s ease-in;
+}
+
+button#agregar_button:hover {
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
 }
 
 #input_cantidad {
@@ -74,4 +89,20 @@ a#agregar_pedido {
 
 #input_direccion {
   width: 200px;
+}
+
+.error {
+  border:none;
+  padding: 5px;
+  -webkit-box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+  -moz-box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+  box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+}
+
+h3.error_msg {
+  display: none;
+  text-align: center;
+  background-color: rgba(0,0,0,0.3);
+  padding: 5px 10px;
+  color: rgba(255,255,255,0.7);
 }

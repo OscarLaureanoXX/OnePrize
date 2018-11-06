@@ -83,12 +83,21 @@ a:hover {
   padding: 7px 20px;
 }
 
-.buttons a button {
+button#agregar_button {
+  width: 170px;
+  border: none;
   color: white;
+  font-weight: bold;
+  text-align: center;
+  float: right;
+  padding: 10px 0;
+  background-color: rgba(0,0,0,0.4);
+  transition: all 0.1s ease-in;
 }
 
-#agregar_cliente {
-  background-color: rgba(0,0,0,0.4);
+button#agregar_button:hover {
+  background-color: rgba(0,0,0,0.5);
+  cursor: pointer;
 }
 
 #cancelar {
@@ -128,4 +137,20 @@ a:hover {
   top: 0;
   background-color: rgba(0,0,0,0.7);
   transition: all 0.25s ease-in;
+}
+
+input.error {
+  border:none;
+  padding: 5px;
+  -webkit-box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+  -moz-box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+  box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+}
+
+h3.error_msg {
+  display: none;
+  text-align: center;
+  background-color: rgba(0,0,0,0.3);
+  padding: 5px 10px;
+  color: rgba(255,255,255,0.7);
 }

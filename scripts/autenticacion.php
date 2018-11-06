@@ -5,7 +5,6 @@ $password = $_POST["password"];
 require_once "connection.php";
 
 session_start();
-     
 
 $sql = "SELECT id, type FROM users WHERE username = '$usuario' and password = '$password'";
 $result = $link->query($sql);

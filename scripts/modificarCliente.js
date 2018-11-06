@@ -3,6 +3,7 @@ $(document).ready(function(){
   let btnGuardar = $("#guardar");
   let btnCancelar = $("#cancelar");
   let btnEliminar = $("#eliminar-cliente");
+  let noEliminar = $("#no_eliminar");
 
   let alert = $("#alert");
   let backdrop = $("#backdrop");
@@ -22,9 +23,26 @@ $(document).ready(function(){
     btnGuardar.show();
   });
 
+  btnCancelar.on("click", function(){
+    formInputs.forEach(function(input){
+      input.style.display = "none";
+    })
+    formLabels.forEach(function(input){
+      input.style.display = "block";
+    })
+    btnModificar.show();
+    btnCancelar.hide();
+    btnGuardar.hide();
+  });
+
   btnEliminar.on("click", function(){
     alert.show();
     backdrop.show();
+  });
+
+  noEliminar.on("click", function(){
+    backdrop.hide();
+    alert.hide();
   });
 
   backdrop.on("click", function() {

@@ -1,6 +1,15 @@
 <?php
-//Seccion de sesion activa
-require_once "scripts/activeSessionAdmin.php";
+//Seccion de sesion activa ---------
+session_start();
+
+if(!isset($_SESSION["status"])){
+  header("Location: index.php");
+}
+
+if($_SESSION["status"] != "admin"){
+  header("Location: index.php");
+}
+//----------------------------------
 ?>
 
 <!DOCTYPE html>
@@ -9,11 +18,9 @@ require_once "scripts/activeSessionAdmin.php";
     <meta charset="utf-8">
     <title>Agregar Pedido</title>
     <style><?php include 'css/estilos-agregarpedido.css'; ?></style>
-    <style><?php include 'css/estilos.css'; ?></style>
     <style><?php include 'css/header.css'; ?></style>
     <script>
     function informacionCliente(str) {
-        console.log(str);
         if (str == "") {
             document.getElementById("input_cantidad").innerHTML = "";
             document.getElementById("input_total").innerHTML = "";
@@ -39,8 +46,11 @@ require_once "scripts/activeSessionAdmin.php";
   </head>
   <body>
     <?php include_once "includes/templates/header.php" ?>
-    <form class="clearfix" action="scripts/creaPedido.php" method="post">
+    <form id="agregar_form" class="clearfix" action="scripts/creaPedido.php" method="post">
       <h1>Nuevo pedido</h1>
+      <h3 class="error_msg" id="error_vacios">No debes dejar campos vacíos.</h3>
+      <h3 class="error_msg" id="error_cantidad">La cantidad debe ser un número entero positivo.</h3>
+      <h3 class="error_msg" id="error_precio">El precio debe ser un número positivo.</h3>
       <fieldset>
         <label>Cliente</label>
         <select name="clientes" onchange="informacionCliente(this.value)">
@@ -66,7 +76,6 @@ require_once "scripts/activeSessionAdmin.php";
             function calculaPrecio(){
                 var cantidad = parseFloat(document.getElementById("input_cantidad").value);
                 var precioUnitario = parseFloat(document.getElementById("input_precio").value);
-
                 document.getElementById("input_total").value = cantidad * precioUnitario;
             }
         </script>
@@ -81,8 +90,16 @@ require_once "scripts/activeSessionAdmin.php";
           ?>
         </select>
       </fieldset>
-      <a id="agregar_pedido"><button name=action type=submit>Guardar</button></a>
+      <fieldset>
+        <label>Fecha Limite</label>
+        <input type="date">
+      </fieldset>
+      <button id="agregar_button" name=action type=submit>Guardar</button>
     </form>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/agregarPedido.js"></script>
   </body>
-
 </html>

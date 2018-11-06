@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #596b2c;
+  padding: 80px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+form {
+  background-color: #90ac4a;
+  padding: 20px;
+  border-radius: 6px;
+  width: 70%;
+  -webkit-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 74px -6px rgba(0,0,0,0.75);
+  font-weight: bold;
+  margin: 100px auto 0 auto;
+}
+
+fieldset {
+  border: none;
+  padding: 7px 30px;
+  margin: 0;
+  float: left;
+}
+
+form fieldset#info_repartidor {
+  width: 37%;
+}
+
+form fieldset#cuenta_repartidor {
+  width: 50%;
+  border-left: 1px solid rgba(0,0,0,0.4);
+}
+
+fieldset label {
+  margin: 10px 15px;
+  display: block;
+}
+
+input[disabled]{
+  cursor: not-allowed;
+}
+
+fieldset input {
+  margin-bottom: 15px;
+  display: block;
+}
+
+form button {
+  border: none;
+  background: none;
+  color: white;
+  font-weight: bold;
+}
+
+form h1 {
+  display: block;
+  background-color: rgba(0,0,0,0.5);
+  margin-top: 0;
+  border-radius: 6px 6px 0 0;
+  padding: 7px;
+  padding-left: 15px;
+  color: #ffffff;
+}
+
+a {
+  padding: 5px;
+  display: block;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.1s ease-in;
+}
+
+a:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+button#agregar_button {
+  width: 170px;
+  text-align: center;
+  float: right;
+  padding: 10px 0;
+  background-color: rgba(0,0,0,0.3);
+  transition: all 0.1s ease-in;
+}
+
+button#agregar_button:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.error {
+  border:none;
+  padding: 5px;
+  -webkit-box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+  -moz-box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+  box-shadow: 0px 0px 21px 5px rgba(153,72,72,1);
+}
+
+h3.error_msg {
+  display: none;
+  text-align: center;
+  background-color: rgba(0,0,0,0.3);
+  padding: 5px 10px;
+  color: rgba(255,255,255,0.7);
+}

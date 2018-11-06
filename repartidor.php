@@ -11,11 +11,14 @@ require_once "scripts/activeSessionUsers.php";
     <style><?php include 'css/header.css'; ?></style>
   </head>
   <body>
-    <?php include_once "includes/templates/header.php" ?>
+    <?php include_once "includes/templates/headerRepartidor.php" ?>
     <div class="contenedor clearfix">
       <div class="main">
         <div id="pedidos">
-          <h3>Pedidos</h3>
+          <h3>
+            Pedidos
+            <a id="a_historial" href="historial_pedidos.php">Historial</a>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -24,6 +27,7 @@ require_once "scripts/activeSessionUsers.php";
                 <th>Dirección</th>
                 <th>Cantidad</th>
                 <th>Total</th>
+                <th>Límite</th>
                 <th>Completado</th>
               </tr>
             </thead>
@@ -34,6 +38,7 @@ require_once "scripts/activeSessionUsers.php";
             </tbody>
           </table>
         </div>
+        <button id="actualizar_completados" type="button" name="button">Limpiar Completados</button>
       </div>
     </div>
     <script

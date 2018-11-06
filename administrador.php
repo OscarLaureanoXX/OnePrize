@@ -1,8 +1,16 @@
 <?php
 
-//Seccion de sesion activa
-require_once "scripts/activeSessionAdmin.php";
+//Seccion de sesion activa ---------
+session_start();
 
+if(!isset($_SESSION["status"])){
+  header("Location: index.php");
+}
+
+if($_SESSION["status"] != "admin"){
+  header("Location: index.php");
+}
+//----------------------------------
 
 //Coneccion a la DB
 require_once "scripts/connection.php";
@@ -34,16 +42,17 @@ if ($result->num_rows > 0) {
         <div id="pedidos">
           <h3>Pedidos</h3>
           <a id="agregar_pedido" href="agregarPedido.php">+</a>
+          <a id="a_historial" href="historial_pedidos_admin.php">Historial</a>
           <table>
             <thead>
               <tr>
-                <th>Id Pedido</th>
+                <th>id</th>
                 <th>Cliente</th>
                 <th>Dirección</th>
                 <th>Cantidad</th>
                 <th>Total</th>
                 <th>Repartidor</th>
-                <th>Completado</th>
+                <th>Límite</th>
               </tr>
             </thead>
             <tbody>
@@ -55,14 +64,7 @@ if ($result->num_rows > 0) {
         </div>
       </div>
       <div class="side">
-        <div class="modificar-cantidad">
-          <div>
-            <h2>Cantidad actual:</h2>
-            <span id="txtCant"> <?php echo $cantidad?> </span>
-            <a id="a_modificar" href="#">Modificar</a>
-          </div>
-        </div>
-        <div class="puntos-de-venta">
+        <div class="lista puntos-de-venta">
           <div>
             <div class="head">
               <h2>Puntos de venta</h1>
@@ -72,6 +74,22 @@ if ($result->num_rows > 0) {
               <?php
                 require_once "scripts/selectPuntosdeVenta.php";
               ?>
+            </ul>
+          </div>
+        </div>
+        <div class="lista repartidores">
+          <div>
+            <div class="head">
+              <h2>Repartidores</h1>
+              <a href="agregarRepartidor.php">+</a>
+            </div>
+            <ul>
+              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
+              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
+              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
+              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
+              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
+              <?php //  require_once "scripts/selectPuntosdeVenta.php"; ?>
             </ul>
           </div>
         </div>

@@ -1,7 +1,15 @@
 <?php
-//Seccion de sesion activa
-require_once "scripts/activeSessionAdmin.php";
+//Seccion de sesion activa ---------
+session_start();
 
+if(!isset($_SESSION["status"])){
+  header("Location: index.php");
+}
+
+if($_SESSION["status"] != "admin"){
+  header("Location: index.php");
+}
+//----------------------------------
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -13,8 +21,10 @@ require_once "scripts/activeSessionAdmin.php";
   </head>
   <body>
     <?php include_once "includes/templates/header.php" ?>
-    <form class="clearfix" action="scripts/creaCliente.php" method="post">
+    <form id="agregar_form" class="clearfix" action="scripts/creaCliente.php" method="post">
       <h1>Nuevo Cliente</h1>
+      <h3 class="error_msg" id="error_contrasenas">Las contraseñas deben coincidir.</h3>
+      <h3 class="error_msg" id="error_vacios">No debes dejar campos vacíos.</h3>
       <div class="fieldset">
         <span>
           <label>Nombre de la empresa</label>
@@ -40,10 +50,15 @@ require_once "scripts/activeSessionAdmin.php";
         </span>
       </div>
       <div class="buttons">
-        <a id="agregar_cliente"><button name=action type=submit>Guardar</button></a>
-        <a href="administrador.php" id="cancelar"><button name=action type=submit>Cancelar</button></a>
+        <button id="agregar_button" name=action type=submit>Guardar</button>
+        <a href="administrador.php" id="cancelar">Cancelar</a>
       </div>
     </form>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/agregarRepartidor.js"></script>
   </body>
 
 </html>

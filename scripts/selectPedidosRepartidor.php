@@ -3,7 +3,8 @@
 require_once "connection.php";
 
 //Obteniendo datos de la tabla pedidos
-$sql = "SELECT Pedidos.id, Clientes.NombreCliente, Clientes.DireccionEmpresa, Pedidos.Cantidad, Pedidos.Precio, Repartidores.NombreRepartidor, Pedidos.Completado
+$sql = "SELECT Pedidos.id, Clientes.NombreCliente, Clientes.DireccionEmpresa,
+Pedidos.Cantidad, Pedidos.Precio, Repartidores.NombreRepartidor, Pedidos.Completado, Pedidos.FechaLimite
 FROM Clientes INNER JOIN Pedidos ON Clientes.id = Pedidos.idCliente
 INNER JOIN Repartidores ON Pedidos.idRepartidor = Repartidores.id";
 
@@ -15,7 +16,7 @@ if ($result->num_rows > 0) {
     //Desplegrando cada renglon
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>" . $row["id"]. "</td><td>" . $row["NombreCliente"]. "</td><td>" . $row["DireccionEmpresa"]. "</td>";
-        echo "<td>" . $row["Cantidad"]. "</td><td>" . $row["Precio"]. "</td>";
+        echo "<td>" . $row["Cantidad"]. "</td><td>" . $row["Precio"]. "</td><td>" .$row["FechaLimite"]. "</td>";
         //Si ya esta completado el checkbox aparecerá ya marcado
         if ($row["Completado"] == 1){
             echo "<td><input type='checkbox' checked></td>";

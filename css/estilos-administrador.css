@@ -31,6 +31,10 @@ input {
     text-align: center;
 }
 
+table {
+  width: 100%;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -82,57 +86,28 @@ div.side {
   float: left;
 }
 
-div.side .modificar-cantidad {
-  height: 37%;
-  padding: 30px 30px 15px 15px;
+.lista {
+  height: 50%;
+  height: 50%;
 }
 
 div.side .puntos-de-venta {
-  height: 63%;
+  padding: 30px 30px 15px 15px;
+}
+
+div.side .repartidores {
   padding: 15px 30px 30px 15px;
 }
 
-div.side .modificar-cantidad div {
+.lista div {
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.25);
-  padding: 1px;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
-div.side .puntos-de-venta div {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,0.25);
-}
-
-div.side .modificar-cantidad a {
-  width: 80%;
-  display: block;
-  color: #ffffff;
-  background-color: rgba(0,0,0,0.5);
-  margin: 0 auto;
-  margin-top: 10px;
-  padding: 10px 0;
+.lista div h2 {
   text-align: center;
-  transition: all 0.1s ease-in;
-}
-
-div.side .modificar-cantidad a:hover {
-  background-color: rgba(0,0,0,0.7);
-}
-
-div.side .modificar-cantidad {
-  text-align: center;
-}
-
-div.side .modificar-cantidad span {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-div.side .puntos-de-venta div h2 {
-  text-align: center;
-  margin:0;
+  margin: 0;
 }
 
 #pedidos {
@@ -225,7 +200,7 @@ div.side .puntos-de-venta div h2 {
 
 #modifica input[type="submit"]:hover {
   background-color: rgba(255,255,255,0.4);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #backdrop {
@@ -291,8 +266,16 @@ div.side .puntos-de-venta div h2 {
     font-weight: bold;
 }
 
-a#a_modificar {
-    margin-bottom: 20px;
+#pedidos #a_historial {
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    float: left;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-weight: bold;
 }
 
 div.ajustar-cantidad {
@@ -307,28 +290,28 @@ tr.pedido-completado td {
   color: #777777;
 }
 
-.puntos-de-venta > div {
+.lista > div {
   padding: 25px;
   overflow: scroll;
 }
 
-.puntos-de-venta a {
+.lista a {
   width: 70%;
   margin: 15px auto;
   text-align: center;
-  font-weight: bold;
+  font-weight: bold!important;
   background-color: rgba(0,0,0,0.55);
 }
 
-.puntos-de-venta a:hover {
+.lista a:hover {
   background-color: rgba(0,0,0,0.7);
 }
 
-.puntos-de-venta ul {
+.lista ul {
   padding: 0;
 }
 
-.puntos-de-venta ul li {
+.lista ul li {
   background-color: rgba(0,0,0,0.35);
   text-align: center;
   border-bottom: none;
@@ -338,12 +321,12 @@ tr.pedido-completado td {
   width: 100%;
 }
 
-.puntos-de-venta ul li:hover {
+.lista ul li:hover {
   background-color: rgba(0,0,0,0.45);
 }
 
-.puntos-de-venta ul li a,
-.puntos-de-venta ul li a:hover{
+.lista ul li a,
+.lista ul li a:hover {
   background: none;
   padding: 0;
   margin: 0;
@@ -351,7 +334,7 @@ tr.pedido-completado td {
   width: 100%;
 }
 
-.puntos-de-venta .head {
+.lista .head {
   height: 45px!important;
   display: flex;
   flex-direction: row;
@@ -359,13 +342,21 @@ tr.pedido-completado td {
   align-items: center;
 }
 
-.puntos-de-venta .head a {
+.lista .head a {
   width: 35px;
   height: 35px;
   line-height: 30px;
   background-color: rgba(0,0,0,0.3);
 }
 
-.puntos-de-venta .head a:hover {
+.lista .head a:hover {
   background-color: rgba(0,0,0,0.45);
+}
+
+.lista li {
+  font-weight: bold;
+}
+
+.lista li:hover {
+  cursor: pointer;
 }

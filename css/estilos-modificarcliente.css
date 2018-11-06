@@ -4,6 +4,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 form {
   background-color: #90ac4a;
   padding: 20px;
