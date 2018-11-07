@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Repartidor</title>
     <style><?php include 'css/estilos-repartidor.css'; ?></style>
-    <style><?php include 'css/header.css'; ?></style>
+    <style><?php include 'css/headerRepartidor.css'; ?></style>
   </head>
   <body>
     <?php include_once "includes/templates/headerRepartidor.php" ?>
