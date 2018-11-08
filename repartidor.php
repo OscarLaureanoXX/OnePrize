@@ -19,6 +19,7 @@ require_once "scripts/activeSessionUsers.php";
             Pedidos
             <a id="a_historial" href="historial_pedidos.php">Historial</a>
           </h3>
+          <form name="borraPedidos" method="post" action="scripts/completarPedidos.php">
           <table>
             <thead>
               <tr>
@@ -38,7 +39,8 @@ require_once "scripts/activeSessionUsers.php";
             </tbody>
           </table>
         </div>
-        <button id="actualizar_completados" type="button" name="button">Limpiar Completados</button>
+        <button id="actualizar_completados" type="submit" name="completar">Limpiar Completados</button>
+        </form>
       </div>
     </div>
     <script

@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["status"]) || !isset($_SESSION["user"])){
+if(!isset($_SESSION["status"]) || !isset($_SESSION["userID"]) || !isset($_SESSION["username"])){
 	header("Location: index.php");
 }
 

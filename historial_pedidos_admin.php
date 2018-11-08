@@ -31,96 +31,9 @@ require_once "scripts/activeSessionAdmin.php";
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>12</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>Jaimico</td>
-                <td>Sierra Bachoco #20A</td>
-                <td>25</td>
-                <td>$959.00</td>
-                <td>04-11-2018</td>
-                <td>09-11-2018</td>
-              </tr>
+              <?php
+                require_once "scripts/selectPedidosCompletados.php";
+              ?>
             </tbody>
           </table>
         </div>

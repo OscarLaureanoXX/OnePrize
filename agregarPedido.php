@@ -67,6 +67,11 @@ require_once "scripts/activeSessionAdmin.php";
           function calculaPrecio(){
               var cantidad = parseFloat(document.getElementById("input_cantidad").value);
               var precioUnitario = parseFloat(document.getElementById("input_precio").value);
+              var cantidadActual = parseFloat(document.getElementById("txtCant").innerText);
+              if(cantidadActual < cantidad){
+                document.getElementById("input_cantidad").value = 0;
+                alert("Cantidad del pedido excede la cantidad disponible en inventario");
+              }
               document.getElementById("input_total").value = cantidad * precioUnitario;
           }
       </script>
@@ -83,7 +88,7 @@ require_once "scripts/activeSessionAdmin.php";
     </fieldset>
     <fieldset>
       <label>Fecha Limite</label>
-      <input type="date">
+      <input type="date" name="fecha_limite">
     </fieldset>
     <button id="agregar_button" name=action type=submit>Guardar</button>
   </form>

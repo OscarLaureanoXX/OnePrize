@@ -8,6 +8,7 @@ $(document).ready(function(){
   let inputCantidad = $("#input_cantidad");
   let inputPrecio = $("#input_precio");
 
+
   btnGuardar.on("click", function(e){
     limpiarAdvertencias();
     if (!verificarCamposLlenos()) {
@@ -30,8 +31,7 @@ $(document).ready(function(){
   });
 
   function verificarCantidad() {
-    return parseFloat(inputCantidad.val()) > 0
-        && parseFloat(inputCantidad.val()) % 1 == 0;
+    return parseFloat(inputCantidad.val()) > 0 && parseFloat(inputCantidad.val()) % 1 == 0;
   }
 
   function verificarPrecio() {

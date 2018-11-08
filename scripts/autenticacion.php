@@ -20,7 +20,8 @@ if($count == 1 && $row["type"] == "admin") {
 else if ($count == 1 && $row["type"] == "user"){
 	//AQUI LO REDIRIJUIMOS A OTRA PAGINA
 	$_SESSION["status"] = $row["type"];
-	$_SESSION["user"] = $row["id"];
+	$_SESSION["username"] = $usuario;
+	$_SESSION["userID"] = $row["id"];
 	//echo "User id: " . $_SESSION["user"] . " Status: " .$_SESSION["status"];
 	header("Location: ../repartidor.php");
 }

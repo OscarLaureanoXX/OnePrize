@@ -8,7 +8,7 @@ $idRepartidor = $_GET["id"];
 //Conexion DB
 require_once "scripts/connection.php";
 
-//Obteniendo datos de los puntos de venta
+//Obteniendo datos de los repartidores
 $sql = "SELECT NombreRepartidor, Telefono FROM Repartidores WHERE id = '".$idRepartidor."' ";
 
 //Consultando
