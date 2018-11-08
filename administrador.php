@@ -1,30 +1,11 @@
 <?php
 
 //Seccion de sesion activa ---------
-session_start();
-
-if(!isset($_SESSION["status"])){
-  header("Location: index.php");
-}
-
-if($_SESSION["status"] != "admin"){
-  header("Location: index.php");
-}
-//----------------------------------
+require_once "scripts/activeSessionAdmin.php";
 
 //Coneccion a la DB
 require_once "scripts/connection.php";
 
-//Consultando cantidad
-$sql = "SELECT Cantidad FROM Productos WHERE ProductID = 1";
-$result = $link->query($sql);
-
-if ($result->num_rows > 0) {
-    // Guardando la cantidad en la variable correspondiente
-    while($row = $result->fetch_assoc()) {
-        $cantidad = $row["Cantidad"];
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -84,12 +65,9 @@ if ($result->num_rows > 0) {
               <a href="agregarRepartidor.php">+</a>
             </div>
             <ul>
-              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
-              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
-              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
-              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
-              <li><a href="modificarRepartidor.php">Juan Pedro</a></li>
-              <?php //  require_once "scripts/selectPuntosdeVenta.php"; ?>
+              <?php
+                require_once "scripts/selectRepartidores.php";
+              ?>
             </ul>
           </div>
         </div>

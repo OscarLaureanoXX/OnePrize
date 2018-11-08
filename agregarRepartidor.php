@@ -1,15 +1,6 @@
 <?php
 //Seccion de sesion activa ---------
-session_start();
-
-if(!isset($_SESSION["status"])){
-  header("Location: index.php");
-}
-
-if($_SESSION["status"] != "admin"){
-  header("Location: index.php");
-}
-//----------------------------------
+require_once "scripts/activeSessionAdmin.php";
 ?>
 
 <!DOCTYPE html>
@@ -22,21 +13,21 @@ if($_SESSION["status"] != "admin"){
   </head>
   <body>
     <?php include_once "includes/templates/header.php" ?>
-    <form id="agregar_form" class="clearfix" action="" method="post">
+    <form id="agregar_form" class="clearfix" action="scripts/creaRepartidor.php" method="post">
       <h1>Nuevo Repartidor</h1>
       <h3 class="error_msg" id="error_contrasenas">Las contraseñas deben coincidir.</h3>
       <h3 class="error_msg" id="error_vacios">No debes dejar campos vacíos.</h3>
       <fieldset id="info_repartidor">
         <label>Nombre</label>
-        <input type="text">
+        <input type="text" name="nombre_repartidor">
         <label>Número de teléfono</label>
-        <input type="text">
+        <input type="text" name="tel_repartidor">
       </fieldset>
       <fieldset id="cuenta_repartidor">
         <label>Nombre de usuario</label>
-        <input type="text">
+        <input type="text" name="username_repartidor">
         <label>Contraseña</label>
-        <input id="contrasena" type="password">
+        <input id="contrasena" type="password" name="password">
         <label>Confirmar Contraseña</label>
         <input id="contrasena_conf" type="password">
       </fieldset>

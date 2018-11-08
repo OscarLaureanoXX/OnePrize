@@ -9,7 +9,6 @@ $(document).ready(function(){
   let inputPrecio = $("#input_precio");
 
   btnGuardar.on("click", function(e){
-    e.preventDefault();
     limpiarAdvertencias();
     if (!verificarCamposLlenos()) {
       e.preventDefault();

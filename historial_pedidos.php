@@ -1,3 +1,7 @@
+<?php
+//Seccion de sesion activa
+require_once "scripts/activeSessionUsers.php";
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

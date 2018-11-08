@@ -18,6 +18,6 @@ if ($result->num_rows > 0) {
     }
 } 
 else {
-    echo "Error base de datos selectPuntosdeVenta ";
+    echo "No hay puntos de venta dados de alta ";
 }
 ?>

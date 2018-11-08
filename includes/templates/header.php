@@ -1,3 +1,7 @@
+<?php
+//Consultando cantidad de galletas
+require_once "scripts/consultaCantidad.php";
+?>
 <header id="header" class="clearfix">
   <div class="modificar-cantidad">
     <h2>Cantidad actual:</h2>

@@ -1,16 +1,6 @@
 <?php
-
 //Seccion de sesion activa ---------
-session_start();
-
-if(!isset($_SESSION["status"])){
-  header("Location: index.php");
-}
-
-if($_SESSION["status"] != "admin"){
-  header("Location: index.php");
-}
-//----------------------------------
+require_once "activeSessionAdmin.php";
 
 
 $idCliente = $_GET["id"];

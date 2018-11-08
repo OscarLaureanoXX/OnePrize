@@ -18,9 +18,6 @@ $repartidor = $_POST["repartidores"];
 $sql = "INSERT INTO Pedidos(idCliente,idRepartidor,Cantidad,Precio,FechaLimite,Completado) 
         VALUES ('". $cliente ."','". $repartidor ."',". $cantidad .",".$total .",'18-06-12 10:34:09', 0 );";
 
-
-
-
 if ($link->query($sql) === TRUE) {
     //echo "Record updated successfully";
     //Redirigiendo a la página de administrador

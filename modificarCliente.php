@@ -1,15 +1,7 @@
 <?php
 //Seccion de sesion activa ---------
-session_start();
+require_once "scripts/activeSessionAdmin.php";
 
-if(!isset($_SESSION["status"])){
-  header("Location: index.php");
-}
-
-if($_SESSION["status"] != "admin"){
-  header("Location: index.php");
-}
-//----------------------------------
 
 $idCliente = $_GET["id"];
 
@@ -61,25 +53,25 @@ else {
       <div class="fieldset">
         <span>
           <input type="hidden" id="id" name="idCliente" value='<?php echo $idCliente; ?>'>
-          <label><?php echo $NombreEmpresa; ?></label>
+          <label>Empresa: <?php echo $NombreEmpresa; ?></label>
           <input placeholder="Nombre de la empresa" name="nombre_empresa" type="text" value='<?php echo $NombreEmpresa; ?>' onClick="this.select();">
         </span>
         <span>
-          <label><?php echo $NombreCliente; ?></label>
+          <label>Nombre: <?php echo $NombreCliente; ?></label>
           <input placeholder="Nombre del cliente" name="nombre_cliente" type="text" value='<?php echo $NombreCliente; ?>' onClick="this.select();">
         </span>
       </div>
       <div class="fieldset">
         <span>
-          <label><?php echo $DireccionEmpresa; ?></label>
+          <label>Direccion: <?php echo $DireccionEmpresa; ?></label>
           <input placeholder="Dirección" name="direccion" type="text" value='<?php echo $DireccionEmpresa; ?>' onClick="this.select();">
         </span>
         <span>
-          <label><?php echo $Telefono; ?></label>
+          <label>Telefono: <?php echo $Telefono; ?></label>
           <input placeholder="Teléfono" name="telefono" type="text" value='<?php echo $Telefono; ?>' onClick="this.select();">
         </span>
         <span>
-          <label><?php echo $Correo; ?></label>
+          <label>Correo: <?php echo $Correo; ?></label>
           <input placeholder="Correo" name="correo" type="text" value='<?php echo $Correo; ?>' onClick="this.select();">
         </span>
       </div>
