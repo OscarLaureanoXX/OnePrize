@@ -5,7 +5,7 @@ require_once "connection.php";
 
 
 //Obteniendo datos de los puntos de venta
-$sql = "SELECT id, NombreRepartidor, Telefono FROM repartidores";
+$sql = "SELECT id, NombreRepartidor, Telefono FROM Repartidores";
 
 //Consultando
 $result = $link->query($sql);

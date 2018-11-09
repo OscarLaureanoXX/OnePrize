@@ -11,7 +11,7 @@ $UsernameRepartidor = $_POST["username_repartidor"];
 //Obteniendo la contraseña del repartidor del form de agregarRepartidor.php
 $Password = $_POST["password"];
 
-echo $NombreRepartidor . " " . $TelRepartidor . " " . $UsernameRepartidor . " " . $Password; 
+//echo $NombreRepartidor . " " . $TelRepartidor . " " . $UsernameRepartidor . " " . $Password; 
 
 //Haciendo insert en la DB
 $sqlUser = "INSERT INTO users (username, password, type) VALUES ('". $UsernameRepartidor ."','". $Password ."','user');";
