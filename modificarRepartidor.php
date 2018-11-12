@@ -30,11 +30,11 @@ else {
   <head>
     <meta charset="utf-8">
     <style><?php include 'css/estilos-modificarrepartidor.css'; ?></style>
-    <style><?php include 'css/header.css'; ?></style>
+    <style><?php include 'css/headerRepartidor.css'; ?></style>
     <title>Modificar Repartidor</title>
   </head>
   <body>
-    <?php include_once "includes/templates/header.php" ?>
+    <?php include_once "includes/templates/headerStandard.php" ?>
     <form class="clearfix" action="scripts/actualizaRepartidor.php" method="post">
       <div class="head">
         <h1><?php echo $NombreRepartidor; ?></h1>

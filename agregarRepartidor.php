@@ -9,10 +9,10 @@ require_once "scripts/activeSessionAdmin.php";
     <meta charset="utf-8">
     <title>Nuevo Repartidor</title>
     <style><?php include 'css/estilos-agregarrepartidor.css'; ?></style>
-    <style><?php include 'css/header.css'; ?></style>
+    <style><?php include 'css/headerRepartidor.css'; ?></style>
   </head>
   <body>
-    <?php include_once "includes/templates/header.php" ?>
+    <?php include_once "includes/templates/headerStandard.php" ?>
     <form id="agregar_form" class="clearfix" action="scripts/creaRepartidor.php" method="post">
       <h1>Nuevo Repartidor</h1>
       <h3 class="error_msg" id="error_contrasenas">Las contraseñas deben coincidir.</h3>

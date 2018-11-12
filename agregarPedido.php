@@ -9,7 +9,7 @@ require_once "scripts/activeSessionAdmin.php";
     <meta charset="utf-8">
     <title>Agregar Pedido</title>
     <style><?php include 'css/estilos-agregarpedido.css'; ?></style>
-    <style><?php include 'css/header.css'; ?></style>
+    <style><?php include 'css/headerRepartidor.css'; ?></style>
     <script>
     function informacionCliente(str) {
         if (str == "") {
@@ -36,7 +36,7 @@ require_once "scripts/activeSessionAdmin.php";
     </script>
   </head>
   <body>
-    <?php include_once "includes/templates/header.php" ?>
+    <?php include_once "includes/templates/headerStandard.php" ?>
     <form id="agregar_form" class="clearfix" action="scripts/creaPedido.php" method="post">
     <h1>Nuevo pedido</h1>
     <h3 class="error_msg" id="error_vacios">No debes dejar campos vacíos.</h3>

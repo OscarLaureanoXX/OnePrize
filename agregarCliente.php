@@ -8,10 +8,10 @@ require_once "scripts/activeSessionAdmin.php";
     <meta charset="utf-8">
     <title>Agregar Cliente</title>
     <style><?php include 'css/estilos-agregarcliente.css'; ?></style>
-    <style><?php include 'css/header.css'; ?></style>
+    <style><?php include 'css/headerRepartidor.css'; ?></style>
   </head>
   <body>
-    <?php include_once "includes/templates/header.php" ?>
+    <?php include_once "includes/templates/headerStandard.php" ?>
     <form id="agregar_form" class="clearfix" action="scripts/creaCliente.php" method="post">
       <h1>Nuevo Cliente</h1>
       <h3 class="error_msg" id="error_contrasenas">Las contraseñas deben coincidir.</h3>

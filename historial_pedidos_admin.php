@@ -8,10 +8,10 @@ require_once "scripts/activeSessionAdmin.php";
     <meta charset="utf-8">
     <title>Repartidor</title>
     <style><?php include 'css/estilos-repartidor.css'; ?></style>
-    <style><?php include 'css/header.css'; ?></style>
+    <style><?php include 'css/headerRepartidor.css'; ?></style>
   </head>
   <body>
-    <?php include_once "includes/templates/header.php" ?>
+    <?php include_once "includes/templates/headerStandard.php" ?>
     <div class="contenedor clearfix">
       <div class="main">
         <div id="pedidos">

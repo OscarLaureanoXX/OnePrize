@@ -37,11 +37,11 @@ else {
   <head>
     <meta charset="utf-8">
     <style><?php include 'css/estilos-modificarcliente.css'; ?></style>
-    <style><?php include 'css/header.css'; ?></style>
+    <style><?php include 'css/headerRepartidor.css'; ?></style>
     <title>Modificar Cliente</title>
   </head>
   <body>
-    <?php include_once "includes/templates/header.php" ?>
+    <?php include_once "includes/templates/headerStandard.php" ?>
     <form class="clearfix" action="scripts/actualizaCliente.php" method="post">
       <div class="head">
         <h1><?php echo $NombreCliente; ?></h1>
